@@ -1,0 +1,44 @@
+{
+  "name": "Technical Assessment",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "main": "appServer.js",
+  "scripts": {
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "serve": "nodemon --require dotenv/config appServer.js"
+  },
+  "author": "AhmedQudaih",
+  "license": "ISC",
+  "jest": {
+    "setupFiles": [
+      "dotenv/config"
+    ],
+    "testEnvironment": "jest-environment-node",
+    "transform": {},
+    "verbose": true,
+    "testTimeout": 50000,
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    }
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "express": "^4.17.1",
+    "mongoose": "^6.0.12",
+    "nodemon": "^2.0.15"
+  },
+  "devDependencies": {
+    "jest": "^28.1.0",
+    "mongoose-memory": "^1.0.0",
+    "supertest": "^6.2.3"
+  }
+}
